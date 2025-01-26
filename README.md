@@ -77,13 +77,11 @@ kotlinc GenerateProjectTree.kt -include-runtime -d GenerateProjectTree.jar
 java -jar GenerateProjectTree.jar
 ```
 
-**Output:** The `project_treeview.txt` file will be created in your project's root directory.
-
-
 ## Customization 🛠️
 
 *   **Excluding Directories:** Modify the `EXCLUDE_DIRS` variable in each script to exclude specific directories (e.g., `.git`, `build`, `node_modules`).
 *   **Excluding Files:** Modify the `EXCLUDE_FILES` variable in each script to exclude specific files (e.g., `.DS_Store`).
+
 
 ## Example Output 📄
 
