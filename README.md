@@ -82,6 +82,24 @@ java -jar GenerateProjectTree.jar
 *   **Excluding Directories:** Modify the `EXCLUDE_DIRS` variable in each script to exclude specific directories (e.g., `.git`, `build`, `node_modules`).
 *   **Excluding Files:** Modify the `EXCLUDE_FILES` variable in each script to exclude specific files (e.g., `.DS_Store`).
 
+## Automating Project Tree Generation in Gradle Projects
+
+You can automate running the script whenever you build or run your Android project in Android Studio or any other Gradle-based project.
+Just add these lines to your `app/build.gradle.kts`
+
+```
+tasks.register<Exec>("generateProjectTree") {
+    group = "documentation"
+    description = "Generates a project tree view"
+    workingDir = project.rootDir
+    commandLine("sh", "generate_project_tree.sh")
+}
+
+tasks.named("preBuild").configure {
+    dependsOn("generateProjectTree")
+}
+```
+
 
 ## Example Output 📄
 
