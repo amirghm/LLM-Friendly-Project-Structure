@@ -122,4 +122,4 @@ MyProject/
 
 Contributions are welcome! If you have any ideas for improvements or want to add support for other languages, feel free to open an issue or submit a pull request.
 
-## License 📜 [MIT License]
+## License 📜 MIT License
